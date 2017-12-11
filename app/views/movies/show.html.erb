@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<%image_tag @movie.image.url(:medium)%>
 <p>
+  <%= image_tag @movie.image.url(:medium)%><br>
   <strong>Title:</strong>
   <%= @movie.title %>
 </p>
