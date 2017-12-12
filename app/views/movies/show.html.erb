@@ -1,29 +1,30 @@
-<%image_tag @movie.image.url(:medium)%>
-<p>
-  <%= image_tag @movie.image.url(:medium)%><br>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @movie.length %>
-</p>
-
-<p>
-  <strong>Director:</strong>
-  <%= @movie.director %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @movie.rating %>
-</p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <%=image_tag @movie.image.url(:medium)%>
+      </div>
+      <div class="col-md-8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title:</th>
+              <th>Description:</th>
+              <th>Length:</th>
+              <th>Director:</th>
+              <th>Rating:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>  <%= @movie.title %></td>
+            <td>  <%= @movie.description %></td>
+            <td>  <%= @movie.length %> </td>
+            <td>  <%= @movie.director %></td>
+            <td>  <%= @movie.rating %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
